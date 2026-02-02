@@ -4,6 +4,7 @@ const bodyParser=require('body-parser');
 
 const cors= require('cors');
 const  AuthRouter= require('./Routes/AuthRouter');
+const ProductRouter=require('./Routes/ProductRouter');
 require('dotenv').config();
 require('./Models/db');//importing database from models database  wow thi is so cool we have write ths line and my database connacted
 const PORT= process.env.PORT || 8080;
@@ -26,7 +27,7 @@ app.use(cors());
 
 
 app.use('/auth',AuthRouter);
-
+app.use('/products',ProductRouter);
 
 
 app.listen(PORT, () => {

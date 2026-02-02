@@ -69,4 +69,6 @@ catch(err){
     })
 
 }}
-module.exports={signup};
+module.exports={signup,
+    login
+};
